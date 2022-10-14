@@ -25,5 +25,14 @@ public class HW_3 {
             }
         }
 
+        /* ДЗ-3 Задача 2
+        Напишите программу, которая выводит в консоль таблицу умножения на 2: от 1 до 10. */
+        System.out.println("\nЗадача 2:");
+        int result;
+        int numberTwo = 2;
+        for (int i = 1; i <= 10; i++) {
+            result = i * numberTwo;
+            System.out.printf("%d * %d = %d\n", numberTwo, i, result);
+        }
     }
 }
