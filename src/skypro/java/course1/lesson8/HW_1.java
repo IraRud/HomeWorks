@@ -37,5 +37,23 @@ public class HW_1 {
         for (; i > 0; i--) {
             System.out.print(i + " ");
         }
+        System.out.println();
+
+        /* ДЗ-1 Задача 3
+        В стране Y население равно 12 миллионам человек.
+        За год рождаемость составляет 17 человек на 1000 человек, смертность - 8 человек.
+        Рассчитайте, какая численность населения будет через 10 лет, принимая во внимание,
+        что показатели рождаемости и смертности постоянны.
+        В консоль выведите результат операции на каждый год в формате "Год …, численность населения составляет … "     */
+        System.out.println("\nЗадача 3:");
+        double population = 12_000_000;
+        double birthRate = 0.017;
+        double mortality = 0.008;
+        int years = 0;
+        while (years < 10) {
+            years += 1;
+            population = population + population * birthRate - population * mortality;
+            System.out.printf("Год %d, численность населения составляет %.3f.\n", years, population);
+        }
     }
 }
