@@ -59,14 +59,21 @@ public class HW_1 {
         /* Доставка в пределах 20 км занимает сутки.
         Доставка в пределах от 20 км до 60 км добавляет еще один день доставки.
         То есть с каждым следующим интервалом доставки срок увеличивается на 1 день.
+        deliveryDistance <= 20 -> 1 день
+        20 < deliveryDistance <= 60 -> 2 дня
+        60 < deliveryDistance <= 100 -> 3 дня
+        и т.д.
          */
         int deliveryDistance = 95;
-        if (deliveryDistance % 20 == 0) {
-            System.out.println("Потребуется дней для доставки: " + deliveryDistance / 20);
+        int dayDelivery = 1;
+        if (deliveryDistance <= 20) {
+            System.out.println("Для дистанции " + deliveryDistance +
+                    " км потребуется дней для доставки: " + dayDelivery + ".");
         } else {
-            System.out.println("Потребуется дней для доставки: " + deliveryDistance / 20);
+            dayDelivery = (deliveryDistance - 20) / 40 + 2;
+            System.out.println("Для дистанции " + deliveryDistance +
+                    " км потребуется дней для доставки: " + dayDelivery + ".");
         }
-
 
         //ДЗ-1 Задача 5
         System.out.println("\nЗадание №5.");
