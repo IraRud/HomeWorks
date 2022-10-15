@@ -45,7 +45,7 @@ public class HW_1 {
         /* високосным является каждый четвертый год, но не является каждый сотый.
         Также високосным является каждый четырехсотый год
          */
-        int year = 4;
+        int year = 400;
         if (year % 400 == 0) {
             System.out.println(year + " год является високосным.");
         } else if (year % 4 == 0 && year % 100 != 0) {
@@ -59,14 +59,21 @@ public class HW_1 {
         /* Доставка в пределах 20 км занимает сутки.
         Доставка в пределах от 20 км до 60 км добавляет еще один день доставки.
         То есть с каждым следующим интервалом доставки срок увеличивается на 1 день.
+        deliveryDistance <= 20 -> 1 день
+        20 < deliveryDistance <= 60 -> 2 дня
+        60 < deliveryDistance <= 100 -> 3 дня
+        и т.д.
          */
-        int deliveryDistance = 25;
-        if (deliveryDistance % 20 == 0) {
-            System.out.println("Потребуется дней для доставки: " + deliveryDistance / 20);
+        int deliveryDistance = 95;
+        int dayDelivery = 1;
+        if (deliveryDistance <= 20) {
+            System.out.println("Для дистанции " + deliveryDistance +
+                    " км потребуется дней для доставки: " + dayDelivery + ".");
         } else {
-            System.out.println("Потребуется дней для доставки: " + deliveryDistance / 20);
+            dayDelivery = (deliveryDistance - 20) / 40 + 2;
+            System.out.println("Для дистанции " + deliveryDistance +
+                    " км потребуется дней для доставки: " + dayDelivery + ".");
         }
-
 
         //ДЗ-1 Задача 5
         System.out.println("\nЗадание №5.");
