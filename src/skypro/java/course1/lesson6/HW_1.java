@@ -45,8 +45,10 @@ public class HW_1 {
         /* високосным является каждый четвертый год, но не является каждый сотый.
         Также високосным является каждый четырехсотый год
          */
-        int year = 100;;
-        if ((year % 4 == 0 || year % 400 == 0) && (year % 100 != 0)) {
+        int year = 4;
+        if (year % 400 == 0) {
+            System.out.println(year + " год является високосным.");
+        } else if (year % 4 == 0 && year % 100 != 0) {
             System.out.println(year + " год является високосным.");
         } else {
             System.out.println(year + " год не является високосным.");
@@ -58,7 +60,7 @@ public class HW_1 {
         Доставка в пределах от 20 км до 60 км добавляет еще один день доставки.
         То есть с каждым следующим интервалом доставки срок увеличивается на 1 день.
          */
-        int deliveryDistance = 95;
+        int deliveryDistance = 25;
         if (deliveryDistance % 20 == 0) {
             System.out.println("Потребуется дней для доставки: " + deliveryDistance / 20);
         } else {
